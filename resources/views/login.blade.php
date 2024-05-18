@@ -13,7 +13,7 @@
                 <div class="flex justify-center">
                     <img src="" alt="">
                     <div class="my-auto font-extrabold text-3xl">
-                        <h1 class=" text-black">Pemilu Rt</h1>
+                        <h1 class=" text-black">Login</h1>
                     </div>
                 </div>
             </div>
