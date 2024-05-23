@@ -2,13 +2,9 @@
     class="font-sans max-w-62.5 md:max-w-62.5 xl:max-w-62.5 ease-nav-brand z-990 fixed inset-y-0 my-8 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between rounded-3xl  bg-white p-0 antialiased shadow-2xl transition-transform duration-200 xl:translate-x-0 xl:bg-transparent max-h-none md:max-h-none xl:max-h-none 2xl:max-h-none overflow-y-auto">
     <i class="absolute top-0 right-0 hidden p-4 opacity-50 cursor-pointer fas fa-times text-slate-400 xl:hidden"
         sidenav-close></i>
-    <a class="block p-4 text-2xl text-slate-700" href="">
-        <div class="text-center mx-auto">
-            <img class="text-center mx-auto h-fit w-10" src="" alt="">
-        </div>
+    <a class="block p-4 text-2xl text-slate-700" href="{{ route('dashboard') }}">
         <div>
-            <h1 class="font-bold text-center text-base">PT.Custompedia</h1>
-            <h1 class="font-bold text-center text-base">Creative Group</h1>
+            <h1 class="font-bold text-center text-2xl">E - Voting</h1>
         </div>
     </a>
     <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black to-transparent" />
@@ -30,7 +26,7 @@
             </li>
             <li class="mt-2 mb-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('user') }}">
                     <div class="flex h-8 w-8 bg-blue-400 rounded-xl items-center justify-center text-center">
                         <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 
@@ -82,10 +78,58 @@
                     <span class="ml-1 font-semibold">Calon</span>
                 </a>
             </li>
-            <li class="mt-2 ml-10">
+            <li class="mt-2 ml-10 mb-2">
                 <a class="py-2 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('pemilih') }}">
                     <span class="ml-1 font-semibold">Pemilih</span>
+                </a>
+            </li>
+            <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black to-transparent" />
+            <li class="mt-2 mb-2">
+                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
+                    href="">
+                    <div class="flex h-8 w-8 bg-blue-400 rounded-xl items-center justify-center text-center">
+                        <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+                            <defs>
+
+                                <style>
+                                    .cls-1 {
+                                        fill: none;
+                                        stroke: #020202;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 1.92px;
+                                    }
+                                </style>
+
+                            </defs>
+
+                            <g id="roll_brush" data-name="roll brush">
+
+                                <line class="cls-1" x1="5.24" y1="11.08" x2="18.66" y2="11.08" />
+
+                                <line class="cls-1" x1="5.24" y1="18.76" x2="18.66" y2="18.76" />
+
+                                <line class="cls-1" x1="5.24" y1="14.92" x2="18.66" y2="14.92" />
+
+                                <rect class="cls-1" x="1.4" y="1.49" width="21.1" height="21.1" />
+
+                                <polygon class="cls-1"
+                                    points="22.5 7.25 16.23 7.25 14.31 7.25 1.4 7.25 1.4 1.49 22.5 1.49 22.5 7.25" />
+
+                                <line class="cls-1" x1="4.28" y1="4.37" x2="6.2" y2="4.37" />
+
+                                <line class="cls-1" x1="8.11" y1="4.37" x2="10.03" y2="4.37" />
+
+                                <line class="cls-1" x1="11.95" y1="4.37" x2="13.87" y2="4.37" />
+
+                            </g>
+
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="ml-1 font-semibold">Suara</span>
+                    </div>
                 </a>
             </li>
             <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black to-transparent" />

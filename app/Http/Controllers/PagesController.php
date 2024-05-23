@@ -11,8 +11,13 @@ class PagesController extends Controller
         return view('dashboard');
     }
 
-    public function pemilih(){
+    public function dashboarduser(){
 
-        return view('pemilih');
+        return view('dashboarduser');
+    }
+
+    public function user(){
+
+        return view('user');
     }
 }

@@ -20,6 +20,7 @@
                 <li class="flex items-center">
                     <a href=""
                         class="block px-0 py-2 font-semibold transition-all ease-nav-brand text-sm text-slate-500">
+                        {{ auth()->user()->name }}
                         <i class="fa fa-user ml-2 sm:mr-1"></i>
                     </a>
                 </li>

@@ -2,135 +2,87 @@
 <html lang="en">
 
 <head>
-    <title>Login</title>
+    <title>Users</title>
     @include('layout.head')
+    <link href="//cdn.datatables.net/2.0.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
 </head>
 
-<body class="">
-
-    <!-- HERO -->
-    <div class="grid grid-cols-1 h-screen bg-gray-100">
-    <div class="grid xl:grid-cols-2 my-auto bg-white rounded-xl p-6 xl:p-24 mx-5 xl:mx-10">
-        <div class="hidden xl:flex bg-gray-100 rounded-xl">
-            <div class="mx-auto my-auto text-center space-y-10">
-                <div class="flex justify-center">
-                    <img src="" alt="">
-                    <div class="my-auto font-extrabold text-3xl">
-                        <h1 class=" text-black">Hero</h1>
+<body class="m-0 font-poppins antialiased font-normal text-base leading-default bg-gray-50 text-slate-500">
+    <!-- sidenav  -->
+    @include('layout.left-side')
+    <!-- end sidenav -->
+    <main class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
+        <!-- Navbar -->
+        @include('layout.navbar')
+        <!-- end Navbar -->
+        <div class="p-6">
+            <div class='w-full rounded-xl bg-white h-fit mx-auto'>
+                <div class="p-3">
+                    <div class="flex justify-between">
+                        <h1 class="font-extrabold text-3xl">Pemilih</h1>
+                        <a class="p-2 bg-blue-500 rounded-xl text-white hover:text-black text-center px-10"
+                            href="{{ route('addpemilih') }}">Add
+                            pemilih</a>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <div class="overflow-auto">
+                        <table id="myTable" class="bg-gray-50 border-2">
+                            <thead class="w-full">
+                                <th>No</th>
+                                <th>Date</th>
+                                <th>Nama</th>
+                                <th>Level</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody>
+                                @php
+                                    $no = 1;
+                                @endphp
+                                @foreach ($user as $user)
+                                    <tr class="border-2">
+                                        <td>{{ $no++ }}</td>
+                                        <td>{{ $user->created_at }}</td>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->level }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td class="">
+                                            <form
+                                                class="p-1 w-full text-white hover:text-black bg-red-500 rounded-xl text-center"
+                                                method="post" action="{{ route('destroypemilih', ['id' => $user->id]) }}">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mx-auto space-y-8">
-            <div class="space-y-5">
-                <div>
-                    <h1 class="text-3xl font-extrabold text-black">Login To Your Account</h1>
-                    <p class="text-black font-extralight">Sign in to continue</p>
-                </div>
-            </div>
-            <form method="post" action="" class="space-y-6">
-                @csrf
-                <div class="space-y-4">
-                    <label for="email" class="text-black">Email</label>
-                    <input class="w-full p-2 bg-gray-100 rounded-xl" type="email" name="email" required />
-                </div>
-                <div class='space-y-2'>
-                    <label for="password" class='text-black'>Password</label>
-                    <input class='w-full p-2 bg-gray-100 rounded-xl' type="password" name="password" required />
-                </div>
-                <div class='bg-gradient-to-r from-blue-400 to-blue-700 p-2 rounded-xl w-full mx-auto'>
-                    <button name="submit" type="submit" class='flex mx-auto text-white text-2xl font-semibold'>
-                        Sign In
-                    </button>
-                </div>
-            </form>
-        </div>
-
-    </div>
-    </div>
-
-    <!-- ABOUT -->
-    <div class="grid grid-cols-1 h-screen bg-gray-100">
-    <div class="grid xl:grid-cols-2 my-auto bg-white rounded-xl p-6 xl:p-24 mx-5 xl:mx-10">
-        <div class="hidden xl:flex bg-gray-100 rounded-xl">
-            <div class="mx-auto my-auto text-center space-y-10">
-                <div class="flex justify-center">
-                    <img src="" alt="">
-                    <div class="my-auto font-extrabold text-3xl">
-                        <h1 class=" text-black">About</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mx-auto space-y-8">
-            <div class="space-y-5">
-                <div>
-                    <h1 class="text-3xl font-extrabold text-black">Login To Your Account</h1>
-                    <p class="text-black font-extralight">Sign in to continue</p>
-                </div>
-            </div>
-            <form method="post" action="" class="space-y-6">
-                @csrf
-                <div class="space-y-4">
-                    <label for="email" class="text-black">Email</label>
-                    <input class="w-full p-2 bg-gray-100 rounded-xl" type="email" name="email" required />
-                </div>
-                <div class='space-y-2'>
-                    <label for="password" class='text-black'>Password</label>
-                    <input class='w-full p-2 bg-gray-100 rounded-xl' type="password" name="password" required />
-                </div>
-                <div class='bg-gradient-to-r from-blue-400 to-blue-700 p-2 rounded-xl w-full mx-auto'>
-                    <button name="submit" type="submit" class='flex mx-auto text-white text-2xl font-semibold'>
-                        Sign In
-                    </button>
-                </div>
-            </form>
-        </div>
-
-    </div>
-    </div>
-
-        <!-- PEMILIH -->
-        <div class="grid grid-cols-1 h-screen bg-gray-100">
-            <div class="grid xl:grid-cols-2 my-auto bg-white rounded-xl p-6 xl:p-24 mx-5 xl:mx-10">
-                <div class="hidden xl:flex bg-gray-100 rounded-xl">
-                    <div class="mx-auto my-auto text-center space-y-10">
-                        <div class="flex justify-center">
-                            <img src="" alt="">
-                            <div class="my-auto font-extrabold text-3xl">
-                                <h1 class=" text-black">Pemilih</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-auto space-y-8">
-                    <div class="space-y-5">
-                        <div>
-                            <h1 class="text-3xl font-extrabold text-black">Login To Your Account</h1>
-                            <p class="text-black font-extralight">Sign in to continue</p>
-                        </div>
-                    </div>
-                    <form method="post" action="" class="space-y-6">
-                        @csrf
-                        <div class="space-y-4">
-                            <label for="email" class="text-black">Email</label>
-                            <input class="w-full p-2 bg-gray-100 rounded-xl" type="email" name="email" required />
-                        </div>
-                        <div class='space-y-2'>
-                            <label for="password" class='text-black'>Password</label>
-                            <input class='w-full p-2 bg-gray-100 rounded-xl' type="password" name="password" required />
-                        </div>
-                        <div class='bg-gradient-to-r from-blue-400 to-blue-700 p-2 rounded-xl w-full mx-auto'>
-                            <button name="submit" type="submit" class='flex mx-auto text-white text-2xl font-semibold'>
-                                Sign In
-                            </button>
-                        </div>
-                    </form>
-                </div>
-        
-            </div>
-            </div>
-        
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let table = new DataTable('#myTable', {
+                columnDefs: [{
+                    targets: 1, // Index of the 'Date' column
+                    render: function(data, type, row) {
+                        // Assuming the date is in 'YYYY-MM-DD HH:MM:SS' format
+                        var date = new Date(data);
+                        return date.toLocaleDateString(); // Format the date as needed
+                    },
+                }, ],
+            });
+        });
+    </script>
 </body>
+@include('layout.script')
 
 </html>
