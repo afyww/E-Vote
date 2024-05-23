@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Users</title>
+    <title>Pemilih</title>
     @include('layout.head')
     <link href="//cdn.datatables.net/2.0.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
 </head>

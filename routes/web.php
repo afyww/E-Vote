@@ -20,7 +20,7 @@ Route::get('/user', [PagesController::class, 'user'])->name('user');
 Route::get('/pemilih', [PemilihController::class, 'index'])->name('pemilih');
 Route::get('/addpemilih', [PemilihController::class, 'create'])->name('addpemilih');
 Route::post('/createpemilih', [PemilihController::class, 'store'])->name('createpemilih');
-Route::get('/destroypemilih/{id}', [PemilihController::class, 'destroy'])->name('destroypemilih');
+Route::delete('/destroypemilih/{id}', [PemilihController::class, 'destroy'])->name('destroypemilih');
 
 
 });

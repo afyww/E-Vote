@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('no');
             $table->string('nama');
+            $table->string('img')->nullable(); 
             $table->longText('visi');
             $table->longText('misi');
             $table->timestamps();
