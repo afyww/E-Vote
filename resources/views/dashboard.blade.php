@@ -21,14 +21,14 @@
                     <a href="">
                         <div class="bg-red-500 p-8 rounded-lg shadow-xl">
                             <h1 class="text-2xl text-white font-bold"></h1>
-                            <h1 class="text-xl font-extrabold text-white text-right">Posts</h1>
+                            <h1 class="text-xl font-extrabold text-white text-right">Calon</h1>
                         </div>
                     </a>
                     <!-- card2 -->
                     <a href="">
                         <div class="bg-green-500 p-8 rounded-lg shadow-xl">
                             <h1 class="text-2xl text-white font-bold"></h1>
-                            <h1 class="text-xl font-extrabold text-white text-right">Projects</h1>
+                            <h1 class="text-xl font-extrabold text-white text-right">Pemilih</h1>
                         </div>
                     </a>
                 </div>
@@ -38,7 +38,7 @@
                 <!-- chart 1-->
                 <div class="p-6 bg-white rounded-xl shadow-xl">
                     <div>
-                        <h1 class="font-light">Jumlah Post</h1>
+                        <h1 class="font-light">Jumlah Calon</h1>
                         <i class="fa fa-arrow-up text-lime-500"></i>
                     </div>
                     <canvas id="grafikPost" width="100" height="50"></canvas>
@@ -46,7 +46,7 @@
                 <!-- chart 2-->
                 <div class="p-6 bg-white rounded-xl shadow-xl">
                     <div>
-                        <h1 class="font-light">Jumlah Project</h1>
+                        <h1 class="font-light">Jumlah User</h1>
                         <i class="fa fa-arrow-up text-lime-500"></i>
                     </div>
                     <canvas id="grafikProject" width="100" height="50"></canvas>

@@ -25,7 +25,7 @@
                     <p class="text-black font-extralight">Sign in to continue</p>
                 </div>
             </div>
-            <form method="post" action="" class="space-y-6">
+            <form method="post" action="{{ route('masuk') }}" class="space-y-6">
                 @csrf
                 <div class="space-y-4">
                     <label for="email" class="text-black">Email</label>

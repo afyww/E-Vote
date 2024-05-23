@@ -91,7 +91,7 @@
             <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black to-transparent" />
             <li class="mt-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('logout') }}">
                     <div class="flex h-8 w-8 bg-blue-400 rounded-xl items-center justify-center text-center">
                         <svg width="12px" height="12px" viewBox="0 0 16 16" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
