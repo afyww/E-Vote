@@ -22,6 +22,7 @@ Route::middleware([LoginAuth::class . ':admin'])->group(function () {
     //PAGES
     Route::get('/dashboard', [PagesController::class, 'dashboard'])->name('dashboard');
     Route::get('/user', [PagesController::class, 'user'])->name('user');
+    Route::get('/profil', [PagesController::class, 'profil'])->name('profil');
     Route::get('/search', [PagesController::class, 'search'])->name('search');
 
     //PEMILIH

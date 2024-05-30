@@ -62,6 +62,12 @@ class PagesController extends Controller
         return view('dashboarduser');
     }
 
+    public function profil()
+    {
+
+        return view('profil');
+    }
+
     public function user()
     {
 

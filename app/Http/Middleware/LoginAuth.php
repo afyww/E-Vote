@@ -16,7 +16,7 @@ class LoginAuth
      */
     public function handle(Request $request, Closure $next, ...$levels)
     {
-        if (in_array($request->user()->level,$levels)){
+        if (Auth::check() && in_array(Auth::user()->level ?? '', $levels)) {
             return $next($request);
         }
         return redirect('/');
