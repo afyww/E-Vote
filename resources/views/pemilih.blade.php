@@ -32,6 +32,7 @@
                                 <th>No</th>
                                 <th>Date</th>
                                 <th>Nama</th>
+                                <th>NIK</th>
                                 <th>Level</th>
                                 <th>Email</th>
                                 <th>Action</th>
@@ -45,11 +46,12 @@
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $user->created_at }}</td>
                                         <td>{{ $user->name }}</td>
+                                        <td>{{ $user->nik }}</td>
                                         <td>{{ $user->level }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td class="">
                                             <form
-                                                class="p-1 w-full text-white hover:text-black bg-red-500 rounded-xl text-center"
+                                                class="p-2 px-10 text-white hover:text-black bg-red-500 rounded-xl text-center"
                                                 method="post" action="{{ route('destroypemilih', ['id' => $user->id]) }}">
                                                 @csrf
                                                 @method('delete')

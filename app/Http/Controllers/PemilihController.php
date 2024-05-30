@@ -10,7 +10,7 @@ class PemilihController extends Controller
     public function index()
     {
 
-        $user = User::all();
+        $user = User::where('level', 'pemilih')->get();
 
         return view('pemilih', compact('user'));
     }
@@ -25,19 +25,21 @@ class PemilihController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users|max:255',
+            'nik' => 'required|string|max:255',
             'password' => 'required|string|min:8|confirmed',
-            'level' => 'required|string|in:admin,pemilih',
         ]);
 
         $user = new User();
         $user->name = $validatedData['name'];
         $user->email = $validatedData['email'];
+        $user->nik = $validatedData['nik'];
         $user->password = bcrypt($validatedData['password']);
-        $user->level = $validatedData['level'];
+        $user->level = 'pemilih';
         $user->save();
 
         return redirect(route('pemilih'))->with('success', 'Pemilih Berhasil Dibuat !');
     }
+
 
     public function destroy($id)
     {

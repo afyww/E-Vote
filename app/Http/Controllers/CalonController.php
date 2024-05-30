@@ -47,19 +47,46 @@ class CalonController extends Controller
         return redirect()->route('calon')->with('success', 'Calon Berhasil Dibuat !');
     }
 
-    public function edit(Calon $calon)
+    public function edit($id)
     {
-        
-        return view('editcalon');
+
+        $calon = Calon::find($id);
+        return view('editcalon', ['calon' => $calon]);
     }
 
-    public function update(Request $request, Calon $calon)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $request->validate([
+            'no' => 'required',
+            'nama' => 'required',
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'visi' => 'required',
+            'misi' => 'required',
+        ]);
 
-    public function destroy(Calon $calon)
+        $calon = Calon::findOrFail($id);
+        $calon->no = $request->input('no');
+        $calon->nama = $request->input('nama');
+        $calon->visi = $request->input('visi');
+        $calon->misi = $request->input('misi');
+
+        if ($request->hasFile('img')) {
+            $uploadedImage = $request->file('img');
+            $imageName = $uploadedImage->getClientOriginalName();
+            $imagePath = $uploadedImage->storeAs('public/img', $imageName);
+            $data['img'] = 'img/' . $imageName;
+            $calon->img = $data['img']; 
+        }
+
+        $calon->save();
+
+        return redirect()->route('calon')->with('success', 'Project Berhasil Diupdate !');
+    }
+    
+    public function destroy($id)
     {
-        //
+        Calon::destroy($id);
+
+        return redirect(route('calon'))->with('success', 'Project Berhasil Dihapus !');
     }
 }

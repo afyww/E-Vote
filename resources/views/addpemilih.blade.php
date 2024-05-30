@@ -32,6 +32,12 @@
                                 id="name" name="name" placeholder="Nama" required>
                         </div>
                         <div class="space-y-2">
+                            <label class="font-semibold text-black">NIK:</label>
+                            <input type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 p-2 rounded-lg w-full"
+                                id="nik" name="nik" placeholder="32XXXXXX" required>
+                        </div>
+                        <div class="space-y-2">
                             <label class="font-semibold text-black">Email:</label>
                             <input type="email"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 p-2 rounded-lg w-full"
@@ -48,15 +54,6 @@
                             <input type="password"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 p-2 rounded-lg w-full"
                                 id="password" name="password_confirmation" placeholder="Password Confirmation" required>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="font-semibold text-black">Level:</label>
-                            <select
-                                class="bg-gray-50 border border-gray-300 text-gray-900 p-2 rounded-lg w-full"
-                                id="level" name="level" required>
-                                <option value="admin">Admin</option>
-                                <option value="pemilih">Pemilih</option>
-                                </select>
                         </div>
                         <button type="submit" class="bg-blue-500  text-white p-2 w-fit hover:text-black rounded-lg">Submit</button>
                     </form>

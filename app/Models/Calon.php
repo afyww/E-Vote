@@ -9,5 +9,11 @@ class Calon extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'no', 'nama', 'img', 'visi', 'misi'];
+        'no', 'nama', 'img', 'visi', 'misi'
+    ];
+
+    public function suara()
+    {
+        return $this->hasMany(Suara::class);
+    }
 }

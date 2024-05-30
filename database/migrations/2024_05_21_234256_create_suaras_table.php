@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('suaras', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('nik');
-            $table->string('memilih');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('calon_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

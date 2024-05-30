@@ -18,23 +18,23 @@
             <div class='w-full h-fit mx-auto'>
                 <div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-4 p-2">
                     <!-- card1 -->
-                    <a href="">
+                    <a href="{{ route('calon') }}">
                         <div class="bg-red-500 p-8 rounded-lg shadow-xl">
-                            <h1 class="text-2xl text-white font-bold"></h1>
+                            <h1 class="text-2xl text-white font-bold">{{ $total_calon }}</h1>
                             <h1 class="text-xl font-extrabold text-white text-right">Calon</h1>
                         </div>
                     </a>
                     <!-- card2 -->
-                    <a href="">
+                    <a href="{{ route('pemilih') }}">
                         <div class="bg-green-500 p-8 rounded-lg shadow-xl">
-                            <h1 class="text-2xl text-white font-bold"></h1>
+                            <h1 class="text-2xl text-white font-bold">{{ $total_pemilih }}</h1>
                             <h1 class="text-xl font-extrabold text-white text-right">Pemilih</h1>
                         </div>
                     </a>
                     <!-- card3 -->
                     <a href="">
                         <div class="bg-yellow-500 p-8 rounded-lg shadow-xl">
-                            <h1 class="text-2xl text-white font-bold"></h1>
+                            <h1 class="text-2xl text-white font-bold">{{ $total_suara }}</h1>
                             <h1 class="text-xl font-extrabold text-white text-right">Suara</h1>
                         </div>
                     </a>
