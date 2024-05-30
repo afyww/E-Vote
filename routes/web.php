@@ -18,8 +18,11 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware([LoginAuth::class . ':admin'])->group(function () {
 
     //ADMIN
+    
+    //PAGES
     Route::get('/dashboard', [PagesController::class, 'dashboard'])->name('dashboard');
     Route::get('/user', [PagesController::class, 'user'])->name('user');
+    Route::get('/search', [PagesController::class, 'search'])->name('search');
 
     //PEMILIH
 
