@@ -15,7 +15,7 @@ class PagesController extends Controller
         $total_calon = Calon::count();
 
         // TOTAL PROJECT
-        $total_pemilih = User::count();
+        $total_pemilih = User::where('level', 'pemilih')->count();
 
         // TOTAL SUARA
         $total_suara = Suara::count();
