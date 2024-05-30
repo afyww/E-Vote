@@ -40,41 +40,47 @@
                     </a>
                 </div>
             </div>
-            <!-- chart -->
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 ">
-                <!-- chart 1-->
-                <div class="p-6 bg-white rounded-xl shadow-xl">
-                    <div>
-                        <h1 class="font-light">Jumlah Calon</h1>
-                        <i class="fa fa-arrow-up text-lime-500"></i>
-                    </div>
-                    <canvas id="grafikPost" width="100" height="50"></canvas>
-                </div>
-                <!-- chart 2-->
-                <div class="p-6 bg-white rounded-xl shadow-xl">
-                    <div>
-                        <h1 class="font-light">Jumlah Pemilih</h1>
-                        <i class="fa fa-arrow-up text-lime-500"></i>
-                    </div>
-                    <canvas id="grafikProject" width="100" height="50"></canvas>
-                </div>
-            </div>
             <div class="grid grid-cols-1 gap-4">
-                <!-- chart 3-->
+                <!-- chart -->
                 <div class="p-6 bg-white rounded-xl shadow-xl">
                     <div>
                         <h1 class="font-light">Jumlah Suara</h1>
                         <i class="fa fa-arrow-up text-lime-500"></i>
                     </div>
-                    <canvas id="grafikPost" width="100" height="50"></canvas>
+                    <canvas id="grafikSuara" width="100" height="50"></canvas>
                 </div>
-
             </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-</body>
+    <script>
+        const labels = {!! json_encode($labels) !!};
+        const datasets = {!! json_encode($datasets) !!}; // Changed $data to $datasets
+    
+        const data = {
+            labels: labels,
+            datasets: datasets // Changed to datasets
+        };
+    
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            },
+        };
+    
+        const myChart = new Chart(
+            document.getElementById('grafikSuara'),
+            config
+        );
+    </script>
+    </body>
 @include('layout.script')
 
 </html>
