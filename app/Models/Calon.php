@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Calon extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'no', 'nama', 'img', 'visi', 'misi'];
 }

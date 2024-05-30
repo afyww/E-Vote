@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('suaras', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('nik');
+            $table->string('memilih');
             $table->timestamps();
         });
     }

@@ -22,7 +22,7 @@
                 <div class="p-6">
                     <div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4 p-2">
                         <!-- card1 -->
-                        <a href="">
+                        <a href="{{ route('calon') }}">
                             <div class="bg-red-500 p-8 rounded-lg shadow-xl">
                                 <h1 class="text-2xl text-white font-bold"></h1>
                                 <h1 class="text-xl font-extrabold text-white text-right">Calon</h1>

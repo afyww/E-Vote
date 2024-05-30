@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Add User</title>
+    <title>Add Pemilih</title>
     @include('layout.head')
 </head>
 
