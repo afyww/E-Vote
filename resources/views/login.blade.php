@@ -8,7 +8,7 @@
 
 <body class="grid grid-cols-1 h-screen bg-gray-100">
     <div class="grid xl:grid-cols-2 my-auto bg-white rounded-xl p-6 xl:p-24 mx-5 xl:mx-10">
-        <div class="hidden xl:flex bg-blue-500 rounded-xl">
+        <div class="hidden xl:flex bg-red-500 rounded-xl">
             <div class="mx-auto my-auto text-center space-y-10">
                 <div class="flex justify-center">
                     <img src="" alt="">
@@ -35,7 +35,7 @@
                     <label for="password" class='text-black'>Password</label>
                     <input class='w-full p-2 bg-gray-100 rounded-xl' type="password" name="password" required />
                 </div>
-                <div class='bg-gradient-to-r from-blue-400 to-blue-700 p-2 rounded-xl w-full mx-auto'>
+                <div class='bg-gradient-to-r from-red-500 to-red-700 p-2 rounded-xl w-full mx-auto'>
                     <button name="submit" type="submit" class='flex mx-auto text-white text-2xl font-semibold'>
                         Sign In
                     </button>

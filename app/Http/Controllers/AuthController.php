@@ -27,7 +27,7 @@ class AuthController extends Controller
             if (Auth::user()->level === 'admin') {
                 return redirect(route('dashboard'))->with('toast_success', 'Berhasil Login !');
             } elseif (Auth::user()->level === 'pemilih') {
-                return redirect(route('dashboarduser'))->with('success', 'User Berhasil Dibuat !');
+                return redirect(route('dashboarduser'))->with('toast_success', 'Berhasil Login !');
             }
         }
 
