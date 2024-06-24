@@ -7,7 +7,7 @@
                         <div class='space-y-4 bg-white p-3 rounded-xl'>
                             <div class=''>
                                 <h1
-                                    class="text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-center text-emerald-700 font-semibold">
+                                    class="text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-center text-black font-semibold">
                                     Visi
                                 </h1>
                             </div>
@@ -18,7 +18,7 @@
                         <div class='space-y-4 bg-white p-3 rounded-xl'>
                             <div class=''>
                                 <h1
-                                    class="text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-center text-emerald-700 font-semibold">
+                                    class="text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-center text-black font-semibold">
                                     Misi
                                 </h1>
                             </div>

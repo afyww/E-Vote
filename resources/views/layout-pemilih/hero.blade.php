@@ -15,18 +15,6 @@
                                         Berpengalaman Mengerjakan Berbagai Project Art Construction Di Seluruh Indonesia
                                     </h1>
                                 </div>
-                                <div class='flex space-x-6'>
-                                    <div class='bg-black p-2 rounded-xl'>
-                                        <a class=' text-white hover:text-red-500 px-5 xl:px-10 text-sm xl:text-lg 2xl:text-2xl font-light'
-                                            href="#about">About
-                                        </a>
-                                    </div>
-                                    <div class='bg-red-600 p-2 rounded-xl'>
-                                        <a class=' text-white hover:text-black px-5 xl:px-10 text-sm xl:text-lg 2xl:text-2xl font-light'
-                                            href="#vote">Vote Now
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
