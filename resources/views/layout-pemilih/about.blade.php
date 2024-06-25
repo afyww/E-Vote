@@ -1,5 +1,5 @@
 <section id="about">
-    <div class="grid grid-cols-1 h-screen bg-gray-100 rounded-xl">
+    <div class="grid grid-cols-1 h-screen bg-gray-100">
         <div class="my-auto ">
             <div class="px-10 lg:px-20 xl:px-20 2xl:px-32">
                 <div class='w-full'>
