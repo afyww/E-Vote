@@ -90,8 +90,9 @@ class PagesController extends Controller
 
     public function dashboarduser()
     {
+        $calon = Calon::all();
 
-        return view('dashboarduser');
+        return view('dashboarduser',  compact('calon'));
     }
 
     public function profil()
@@ -104,5 +105,45 @@ class PagesController extends Controller
     {
 
         return view('user');
+    }
+
+    public function result()
+    {
+        // Fetch data for the chart
+        $suara_per_calon = Suara::selectRaw("calon_id, COUNT(calon_id) as count")
+            ->groupBy('calon_id')
+            ->with('calon')
+            ->get();
+
+        // Prepare arrays for labels and data
+        $labels = [];
+        $data = [];
+
+        foreach ($suara_per_calon as $item) {
+            $labels[] = $item->calon->nama;
+            $data[] = $item->count;
+        }
+
+        // Generate random colors for each bar (optional)
+        $backgroundColors = [];
+        $borderColors = [];
+        foreach ($labels as $label) {
+            $backgroundColors[] = 'rgba(' . rand(0, 255) . ',' . rand(0, 255) . ',' . rand(0, 255) . ', 0.2)';
+            $borderColors[] = 'rgba(' . rand(0, 255) . ',' . rand(0, 255) . ',' . rand(0, 255) . ', 1)';
+        }
+
+        // Pass data to the view
+        return view('result', [
+            'labels' => $labels,
+            'datasets' => [
+                [
+                    'label' => 'Suara per Calon',
+                    'data' => $data,
+                    'backgroundColor' => $backgroundColors,
+                    'borderColor' => $borderColors,
+                    'borderWidth' => 1,
+                ],
+            ],
+        ]);
     }
 }

@@ -56,12 +56,12 @@
     <script>
         const labels = {!! json_encode($labels) !!};
         const datasets = {!! json_encode($datasets) !!}; // Changed $data to $datasets
-    
+
         const data = {
             labels: labels,
             datasets: datasets // Changed to datasets
         };
-    
+
         const config = {
             type: 'bar',
             data: data,
@@ -74,13 +74,13 @@
                 }
             },
         };
-    
+
         const myChart = new Chart(
             document.getElementById('grafikSuara'),
             config
         );
     </script>
-    </body>
+</body>
 @include('layout.script')
 
 </html>

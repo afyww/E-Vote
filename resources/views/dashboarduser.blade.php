@@ -16,11 +16,11 @@
     @include('layout-pemilih.hero')
     <!-- End Section -->
 
-    <!-- Fasilitas Section -->
+    <!-- About Section -->
     @include('layout-pemilih.about')
     <!-- End Section -->
 
-    <!-- Experience Section -->
+    <!-- Vote Section -->
     @include('layout-pemilih.vote')
     <!-- End Section -->
 

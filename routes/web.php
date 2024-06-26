@@ -39,8 +39,6 @@ Route::middleware([LoginAuth::class . ':admin'])->group(function () {
 
     //SUARA
     Route::get('/suara', [SuaraController::class, 'index'])->name('suara');
-    Route::get('/addsuara', [SuaraController::class, 'create'])->name('addsuara');
-    Route::post('/createsuara', [SuaraController::class, 'store'])->name('createsuara');
 });
 
 //PEMILIH
@@ -48,4 +46,8 @@ Route::middleware([LoginAuth::class . ':admin'])->group(function () {
 Route::middleware([LoginAuth::class . ':pemilih'])->group(function () {
 
     Route::get('/e-voting', [PagesController::class, 'dashboarduser'])->name('dashboarduser');
+    Route::post('/vote', [SuaraController::class, 'store'])->name('vote');
+    Route::get('/result', [PagesController::class, 'result'])->name('result');
+
+
 });

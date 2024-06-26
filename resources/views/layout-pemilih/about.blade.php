@@ -3,36 +3,15 @@
         <div class="my-auto ">
             <div class="px-10 lg:px-20 xl:px-20 2xl:px-32">
                 <div class='w-full'>
-                    <div class="space-y-6 xl:space-y-0 grid grid-cols-1 xl:grid-cols-2 xl:gap-5">
-                        <div class='space-y-4 bg-white p-3 rounded-xl'>
-                            <div class=''>
-                                <h1
-                                    class="text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-center text-black font-semibold">
-                                    Visi
-                                </h1>
-                            </div>
-                            <p class='text-black mx-10 font-light text-xs xl:text-xl 2xl:text-2xl text-left'>Menjadi
-                                perusahaan jasa pembuatan pembuatan aquascape, taman, aviary, dan vertical garden yang
-                                inovasi dan menginspirasi khalayak umum.</p>
+                    <div class='space-y-4 bg-white p-3 rounded-xl'>
+                        <div class=''>
+                            <h1
+                                class="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center text-black font-semibold">
+                                About
+                            </h1>
                         </div>
-                        <div class='space-y-4 bg-white p-3 rounded-xl'>
-                            <div class=''>
-                                <h1
-                                    class="text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-center text-black font-semibold">
-                                    Misi
-                                </h1>
-                            </div>
-                            <div class='text-black mx-10 font-light text-xs xl:text-xl 2xl:text-2xl text-left'>
-                                <p>1. Memberikan layanan berkualitas tinggi melalui komitmen terhadap kepuasan pelanggan
-                                </p>
-                                <p>2. Menggabungkan kreativitas dan keahlian desain untuk menciptakan lingkungan hidup
-                                    buatan yang estetik dan fungsional
-                                </p>
-                                <p>3. Berkomitmen untuk menjaga kelestarian lingkungan alam dan meminimalkan dampak
-                                    negatif pada ekosistem dan sumber daya alam
-                                </p>
-                            </div>
-                        </div>
+                        <p class='text-black text-center mx-10 font-light text-xs xl:text-xl 2xl:text-2xl'>Menjadi
+                            E-voting adalah metode pemungutan suara yang menggunakan sistem elektronik untuk memfasilitasi proses pemilihan umum atau pemilihan lainnya. Ini dapat dilakukan melalui berbagai platform seperti mesin suara elektronik di tempat pemungutan suara, aplikasi mobile, atau melalui internet. Tujuan utamanya adalah untuk meningkatkan aksesibilitas, efisiensi, dan potensi partisipasi pemilih dengan memanfaatkan teknologi digital. Meskipun menawarkan banyak keuntungan, e-voting juga menghadapi tantangan terkait keamanan data, privasi, keandalan teknologi, dan kepercayaan publik. Implementasi e-voting bervariasi di seluruh dunia, tergantung pada infrastruktur teknologi, kebijakan keamanan, dan preferensi masyarakat setempat.</p>
                     </div>
                 </div>
             </div>

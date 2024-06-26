@@ -25,7 +25,7 @@
                         <div class="my-auto">
                             <div class="flex space-x-2">
                                 <div>
-                                    <img class="w-10 h-fit" src="{{ asset('assets/img/logo.png') }}" alt="">
+                                    <h1>As</h1>
                                 </div>
                                 <div class="my-auto">
                                     <h1 class="">{{ auth()->user()->name }}</h1>

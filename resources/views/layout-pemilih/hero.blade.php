@@ -8,13 +8,11 @@
                             <div class='my-auto'>
                                 <img class='rounded-xl my-auto' src="" alt="" />
                             </div>
-                            <div class="space-y-5">
-                                <div class=''>
-                                    <h1
-                                        class='text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl text-left text-black font-semibold'>
-                                        Berpengalaman Mengerjakan Berbagai Project Art Construction Di Seluruh Indonesia
-                                    </h1>
-                                </div>
+                            <div class=''>
+                                <h1
+                                    class='text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-left text-black font-semibold'>
+                                    "Demokrasi dalam Genggaman Anda"
+                                </h1>
                             </div>
                         </div>
                     </div>
