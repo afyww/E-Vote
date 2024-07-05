@@ -7,6 +7,7 @@ use App\Http\Controllers\CalonController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PemilihController;
 use App\Http\Controllers\SuaraController;
+use App\Http\Controllers\DecryptController;
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('masuk');
@@ -39,6 +40,10 @@ Route::middleware([LoginAuth::class . ':admin'])->group(function () {
 
     //SUARA
     Route::get('/suara', [SuaraController::class, 'index'])->name('suara');
+
+    //DECRYPT
+    Route::get('/decrypt', [DecryptController::class, 'decrypt'])->name('decrypt');
+
 });
 
 //PEMILIH

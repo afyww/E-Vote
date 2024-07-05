@@ -133,6 +133,13 @@
                 </a>
             </li>
             <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black to-transparent" />
+            <li class="mt-2 mb-2 ml-10">
+                <a class="py-2 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
+                    href="{{ route('decrypt') }}">
+                    <span class="ml-1 font-semibold">Decrypt</span>
+                </a>
+            </li>
+            <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black to-transparent" />
             <li class="mt-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
                     href="{{ route('logout') }}">
