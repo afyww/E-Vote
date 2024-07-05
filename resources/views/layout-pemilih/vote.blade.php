@@ -1,5 +1,5 @@
 <section class="" id="vote">
-    <div class="grid grid-cols-1 h-screen bg-gray-100">
+    <div class="grid grid-cols-1 bg-gray-100">
         <div class="">
             <div class="px-10 lg:px-20 xl:px-20 2xl:px-32">
                 <div class='w-full'>
@@ -14,11 +14,11 @@
                             @foreach ($calon as $item)
                                 <div class="p-4 rounded-xl space-y-4">
                                     <h1 class="text-black text-center text-3xl">{{ $item->no }}</h1>
-                                    <img class="h-fit mx-auto w-fit"
+                                    <img class="h-44 mx-auto w-fit"
                                         src="{{ asset('storage/img/' . basename($item->img)) }}">
-                                    <h1 class="text-black font-extrabold text-3xl text-center">{{ $item->nama }}</h1>
-                                    <h1 class="text-black text-center font-light text-xl">{{ $item->visi }}</h1>
-                                    <h1 class="text-black text-center font-light text-xl">{{ $item->misi }}</h1>
+                                    <h1 class="text-black font-extrabold text-2xl text-center">{{ $item->nama }}</h1>
+                                    <h1 class="text-black text-center font-light text-md">Visi: {{ $item->visi }}</h1>
+                                    <h1 class="text-black text-center font-light text-md">Misi:{{ $item->misi }}</h1>
                                     <div class="mx-auto text-center">
                                         <form action="{{ route('vote') }}" method="POST">
                                             @csrf

@@ -6,9 +6,9 @@
                     <div class=''>
                         <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 my-auto">
                             <div class='my-auto'>
-                                <img class='rounded-xl my-auto' src="" alt="" />
+                                <img class='h-fit w-fit my-auto' src="{{ asset('assets/img/about.png') }}" alt="" />
                             </div>
-                            <div class=''>
+                            <div class='my-auto'>
                                 <h1
                                     class='text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-left text-black font-semibold'>
                                     "Demokrasi dalam Genggaman Anda"

@@ -25,14 +25,16 @@
                             </h1>
                         </div>
                         <!-- chart -->
-                        <div class="p-6">
+                        <div class="p-2">
                             <div>
                                 <h1 class="font-light">Jumlah Suara</h1>
                                 <i class="fa fa-arrow-up text-lime-500"></i>
                             </div>
                             <canvas id="grafikSuara" width="100" height="20"></canvas>
                         </div>
-
+                        <div class="rounded-xl p-2 bg-red-500 text-center">
+                            <a class="text-center text-lg font-bold text-white" href="{{ route('logout') }}">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>

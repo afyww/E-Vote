@@ -34,8 +34,8 @@
                                 <th>No</th>
                                 <th>Nama</th>
                                 <th>Img</th>
-                                <th>Visi</th>
-                                <th>Misi</th>
+                                <th class="h-20">Visi</th>
+                                <th class="h-20">Misi</th>
                                 <th>Action</th>
                             </thead>
                             <tbody>
@@ -52,8 +52,8 @@
                                             <img class="h-fit mx-auto w-32"
                                                 src="{{ asset('storage/img/' . basename($calon->img)) }}">
                                         </td>
-                                        <td>{{ $calon->visi }}</td>
-                                        <td>{{ $calon->misi }}</td>
+                                        <td class="">{{ $calon->visi }}</td>
+                                        <td class="">{{ $calon->misi }}</td>
                                         <td class="flex space-x-2">
                                             <a href="{{ route('editcalon', ['id' => $calon->id]) }}">
                                                 <h1

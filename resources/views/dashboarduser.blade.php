@@ -6,7 +6,7 @@
     @include('layout-pemilih.head')
 </head>
 
-<body>
+<body class="">
 
     <!-- Navbar -->
     @include('layout-pemilih.header')
